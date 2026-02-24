@@ -34,7 +34,7 @@ st.title("Enhanced Q&A Chatbot With OpenAI")
 
 
 ## Select the OpenAI model
-llm=st.sidebar.selectbox("Select Open Source model",["mistral","llama2","llama3","gemma:2b"])
+llm=st.sidebar.selectbox("Select Open Source model",["mistral","llama2","llama3","gemma:2b","moondream"])
 
 ## Adjust response parameter
 temperature=st.sidebar.slider("Temperature",min_value=0.0,max_value=1.0,value=0.7)
