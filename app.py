@@ -30,7 +30,7 @@ def generate_response(question,llm,temperature,max_tokens):
     return answer
 
 ## #Title of the app
-st.title("Enhanced Q&A Chatbot With OpenAI")
+st.title("Enhanced Q&A Chatbot With Ollama")
 
 
 ## Select the OpenAI model
@@ -54,4 +54,5 @@ if send_button and user_input :
     st.write(response)
 else:
     st.write("Please provide the user input")
+
 
