@@ -23,7 +23,12 @@ prompt=ChatPromptTemplate.from_messages(
 )
 
 def generate_response(question,llm,temperature,max_tokens):
-    llm=Ollama(model=llm,base_url="http://127.0.0.1:11434")
+    llm= Ollama(
+        model="llama2",  # default, can be updated from sidebar
+        base_url="http://127.0.0.1:11434",
+        temperature=0.7,
+        max_tokens=150
+    )
     output_parser=StrOutputParser()
     chain=prompt|llm|output_parser
     answer=chain.invoke({'question':question})
@@ -54,6 +59,7 @@ if send_button and user_input :
     st.write(response)
 else:
     st.write("Please provide the user input")
+
 
 
 
