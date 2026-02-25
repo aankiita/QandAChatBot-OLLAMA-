@@ -2,7 +2,7 @@ import streamlit as st
 
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_community.llms import Ollama
+from langchain_ollama import OllamaLLM
 import os
 
 import os
@@ -23,7 +23,7 @@ prompt=ChatPromptTemplate.from_messages(
 )
 
 def generate_response(question,llm,temperature,max_tokens):
-    llm= Ollama(
+    llm= OllamaLLM(
         model="llama2",  # default, can be updated from sidebar
         base_url="http://127.0.0.1:11434",
         temperature=0.7,
@@ -59,6 +59,7 @@ if send_button and user_input :
     st.write(response)
 else:
     st.write("Please provide the user input")
+
 
 
 
