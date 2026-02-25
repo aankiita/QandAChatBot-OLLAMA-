@@ -4,4 +4,6 @@ python-dotenv
 langchain-community
 langchain_community
 langchain_core
+langchain_ollama
+
 streamlit
