@@ -1,3 +1,3 @@
 # QandAChatBot-OLLAMA-
 
-live demo- https://4xiwntgarjbmrvk7nfjcjk.streamlit.app/
+Using Ollama LLM Models locally so can't be deployed.
